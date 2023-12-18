@@ -1,10 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+import DemoSwiper from '../components/DemoSwiper.jsx'
+import { Image } from 'astro:assets';
+import image_1 from '../assets/images/image_1.jpg'
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
 
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+
+  <DemoSwiper client:load />
+
+  <Image src={image_1} alt="Image 1" width={400}/>
 </BaseLayout>
