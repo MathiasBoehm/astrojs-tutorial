@@ -24,9 +24,9 @@ export default function DemoSwiper() {
             <h2>world</h2>
         </div>
       </SwiperSlide>
-      <SwiperSlide><img src="images/image_1.jpg" width="400px"></img></SwiperSlide>
-      <SwiperSlide><img src="images/image_2.jpg" width="400px"></img></SwiperSlide>
-      <SwiperSlide><img src="images/image_3.jpg" width="400px"></img></SwiperSlide>
+      <SwiperSlide><img src="images/image_1.jpg" height="200px"></img></SwiperSlide>
+      <SwiperSlide><img src="images/image_2.jpg" height="200px"></img></SwiperSlide>
+      <SwiperSlide><img src="images/image_3.jpg" height="200px"></img></SwiperSlide>
     </Swiper>
   );
 };

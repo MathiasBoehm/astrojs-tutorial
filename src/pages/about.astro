@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+import { Image } from 'astro:assets';
+import image_1 from '../assets/images/image_1.jpg'
+
 const pageTitle = "About me";
 
 const identity = {
@@ -48,6 +51,10 @@ const textCase = "uppercase";
 	{finished && <p>I finished this tutorial!</p>}
 
 	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+
+	
+	<Image src={image_1} alt="Image 1" width={400}/>
 </BaseLayout>
 
 

@@ -2,8 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
 import DemoSwiper from '../components/DemoSwiper.jsx'
-import { Image } from 'astro:assets';
-import image_1 from '../assets/images/image_1.jpg'
+import DataComponent from '../components/DataComponent';
+
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -13,5 +13,6 @@ const pageTitle = "Home Page";
 
   <DemoSwiper client:load />
 
-  <Image src={image_1} alt="Image 1" width={400}/>
+  <DataComponent client:load />
+
 </BaseLayout>
