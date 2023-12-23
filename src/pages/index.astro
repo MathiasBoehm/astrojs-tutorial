@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
 import DemoSwiper from '../components/DemoSwiper.jsx'
 import DataComponent from '../components/DataComponent';
+import DynamicDataSwiper from '../components/DynamicDataSwiper';
 
 const pageTitle = "Home Page";
 ---
@@ -11,8 +12,11 @@ const pageTitle = "Home Page";
 
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
+  <!--
   <DemoSwiper client:load />
 
   <DataComponent client:load />
+  -->
+  <DynamicDataSwiper client:load />
 
 </BaseLayout>
