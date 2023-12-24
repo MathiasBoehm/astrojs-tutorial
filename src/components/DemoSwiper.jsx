@@ -15,7 +15,7 @@ export default function DemoSwiper() {
   
   return (
     <Swiper
-    direction={'vertical'}
+      direction={'vertical'}
       modules={[Autoplay, Pagination, EffectFade]}
       spaceBetween={50}
       slidesPerView={1}
