@@ -6,8 +6,12 @@ export default function Greeting({messages}) {
 
   const [greeting, setGreeting] = useState(messages[0]);
 
+  const style = {
+    padding: '10px 0 20px'
+  }
+
   return (
-    <div>
+    <div style={style}>
       <h3>{greeting}! Thank you for visiting!</h3>
       <button onClick={() => setGreeting(randomMessage())}>
         New Greeting

@@ -4,6 +4,7 @@ import Greeting from '../components/Greeting.jsx';
 import DemoSwiper from '../components/DemoSwiper.jsx'
 import DataComponent from '../components/DataComponent';
 import DynamicDataSwiper from '../components/DynamicDataSwiper';
+import SwiperWithPropsWrapper from '../components/SwiperWithPropsWrapper.astro';
 
 const pageTitle = "Home Page";
 ---
@@ -16,7 +17,9 @@ const pageTitle = "Home Page";
   <DemoSwiper client:load />
 
   <DataComponent client:load />
-  -->
-  <DynamicDataSwiper client:load />
 
+  <DynamicDataSwiper client:load />
+-->
+
+  <SwiperWithPropsWrapper />
 </BaseLayout>
