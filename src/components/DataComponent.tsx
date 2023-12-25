@@ -12,7 +12,7 @@ const DataComponent = () => {
 
     return <div>
         <h2>I am a React componment</h2>
-        <p>Press Button to read person data ...</p>
+        <p>Press the button to read person data ...</p>
         {
             persons.length > 0 && persons.map(p => <p>{p.name}</p>)
         }
