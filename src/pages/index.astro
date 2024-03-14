@@ -5,11 +5,15 @@ import DemoSwiper from '../components/DemoSwiper.jsx'
 import DataComponent from '../components/DataComponent';
 import DynamicDataSwiper from '../components/DynamicDataSwiper';
 import SwiperWithPropsWrapper from '../components/SwiperWithPropsWrapper.astro';
+import { Icon } from 'astro-icon/components'
 
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
+
   <h2>My awesome blog subtitle</h2>
+
+  <Icon size={48} name="bi:youtube" />
 
   <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 
