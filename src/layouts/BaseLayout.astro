@@ -16,11 +16,12 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <h1 transition:animate="slide">{pageTitle}</h1>
-    <slot />
+    <div class="max-w-6xl mx-auto mt-16 mb-20 pl-8 pr-4">
+      <h1 class="text-3xl mb-8" transition:animate="slide">{pageTitle}</h1>
+      <slot />
+    </div>
     <Footer />
     <script>
-      import "../scripts/menu.js";
     </script>
   </body>
 </html>

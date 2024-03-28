@@ -1,12 +1,47 @@
 ---
-import Navigation from './Navigation.astro';
-import Hamburger from './Hamburger.astro';
-import ThemeIcon from './ThemeIcon.astro';
 ---
-<header>
-  <nav>
-    <Hamburger />
-    <ThemeIcon />
-    <Navigation />
-  </nav>
-</header>
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl">Astro JS Playground</a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/scenes">Scenes</a></li>
+      <li>
+        <details>
+          <summary>
+            Blog
+          </summary>
+          <ul class="p-2 bg-base-100 rounded-t-none">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tags">Tags</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            Swiper
+          </summary>
+          <ul class="p-2 bg-base-100 rounded-t-none">
+            <li><a href="/swiper/demo-swiper-page">Demo</a></li>
+            <li><a href="/swiper/dynamic-swiper-page">Dynamic</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            JSX
+          </summary>
+          <ul class="p-2 bg-base-100 rounded-t-none">
+            <li><a href="/jsx/greeting-page">Greeting</a></li>
+            <li><a href="/jsx/data-component-page">Data</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>

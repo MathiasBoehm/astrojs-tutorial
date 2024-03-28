@@ -25,6 +25,7 @@
     "@iconify-json/bi": "^1.1.23",
     "@iconify-json/entypo-social": "^1.1.8",
     "@iconify-json/mdi": "^1.1.64",
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "daisyui": "^4.9.0"
   }
 }
