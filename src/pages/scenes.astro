@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { scenes } from "../data/scenes.json";
+import Scene from "../components/Scene.astro";
+
+console.log(scenes);
+---
+<BaseLayout pageTitle="Scenes">
+
+    <h2>My Scenes</h2>
+  
+    <div class="flex flex-wrap">
+      {scenes.map(s => (
+            <Scene scene={s} />
+      ))}
+    </div>
+    
+  
+  </BaseLayout>
+  
