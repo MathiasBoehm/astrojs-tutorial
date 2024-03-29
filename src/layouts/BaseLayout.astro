@@ -1,11 +1,10 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/global.css';
 import { ViewTransitions } from 'astro:transitions';
 const { pageTitle } = Astro.props;
 ---
-<html lang="en">
+<html lang="en" data-theme="garden">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -16,12 +15,10 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <div class="max-w-6xl mx-auto mt-16 mb-20 pl-8 pr-4">
+    <div class="max-w-6xl mx-auto mt-8 pl-4 pr-4">
       <h1 class="text-3xl mb-8" transition:animate="slide">{pageTitle}</h1>
       <slot />
     </div>
     <Footer />
-    <script>
-    </script>
   </body>
 </html>
