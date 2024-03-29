@@ -1,47 +1,63 @@
 ---
+const menu = [
+  { title: 'Home', url: '/' },
+  { title: 'About', url: '/about/' },
+  { title: 'Scenes', url: '/scenes' },
+  { title: 'Blog', url: '/blog', submenu: [
+    { title: 'Blog', url: '/blog' },
+    { title: 'Tags', url: '/tags' }
+  ] },
+  { title: 'Swiper', url: '/swiper/demo-swiper-page', submenu: [
+    { title: 'Demo', url: '/swiper/demo-swiper-page' },
+    { title: 'Dynamic', url: '/swiper/dynamic-swiper-page' }
+  ] },
+  { title: 'JSX', url: '/jsx/greeting-page', submenu: [
+    { title: 'Greeting', url: '/jsx/greeting-page' },
+    { title: 'Data', url: '/jsx/data-component-page' }
+  ] }
+];
 ---
 <div class="navbar bg-base-100 pr-8">
-  <div class="flex-1">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        { menu.map(item => (
+          item.submenu ? 
+            <li>
+              <a>{item.title}</a>
+               <ul class="p-2">
+                  { item.submenu.map(subitem => (
+                    <li><a href={subitem.url}>{subitem.title}</a></li>
+                  ))}
+                </ul>
+            </li>
+            :
+            <li><a href={item.url}>{item.title}</a></li>
+        ))}
+      </ul>
+    </div>
     <a class="btn btn-ghost text-xl">Astro JS Playground</a>
   </div>
-  <div class="flex-none">
+  <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/scenes">Scenes</a></li>
-      <li>
-        <details>
-          <summary>
-            Blog
-          </summary>
-          <ul class="p-2 bg-base-100 rounded-t-none">
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/tags">Tags</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>
-            Swiper
-          </summary>
-          <ul class="p-2 bg-base-100 rounded-t-none">
-            <li><a href="/swiper/demo-swiper-page">Demo</a></li>
-            <li><a href="/swiper/dynamic-swiper-page">Dynamic</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>
-            JSX
-          </summary>
-          <ul class="p-2 bg-base-100 rounded-t-none">
-            <li><a href="/jsx/greeting-page">Greeting</a></li>
-            <li><a href="/jsx/data-component-page">Data</a></li>
-          </ul>
-        </details>
-      </li>
+      { menu.map(item => (
+        item.submenu ? 
+          <li>
+            <details>
+              <summary>{item.title}</summary>
+              <ul class="p-2 bg-base-100 rounded-t-none">
+                { item.submenu.map(subitem => (
+                  <li><a href={subitem.url}>{subitem.title}</a></li>
+                ))}
+              </ul>
+            </details>
+          </li>
+          :
+          <li><a href={item.url}>{item.title}</a></li>
+      ))}
     </ul>
   </div>
 </div>
